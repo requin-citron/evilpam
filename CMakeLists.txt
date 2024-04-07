@@ -6,8 +6,11 @@ set(CMAKE_SYSTEM_PROCESSOR "x86_64")
 set(CMAKE_SHARED_LIBRARY_PREFIX "")
 
 
-#define override
-add_compile_definitions(MASTER_PASSWORD="KLEMOU")
+#define DEBUG TRACE
+if(DEFINED DEBUG)
+    add_compile_definitions(DEBUG=1)
+endif()
+#add_compile_definitions(MASTER_PASSWORD="KLEMOU")
 
 # Remove trailing '\' and '/' at the end of the path, so can reliably compare
 STRING(REGEX REPLACE "[/\\]+$" "" CMAKE_SOURCE_DIR ${CMAKE_SOURCE_DIR})
